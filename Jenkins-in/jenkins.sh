@@ -1,4 +1,3 @@
-#!/usr/bin/env bash
 # !/usr/bin/env bash
 # kill旧项目，删除旧项目，启动新项目，备份老项目
 DATE=$(date +%Y%m%d)
