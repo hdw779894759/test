@@ -1,9 +1,10 @@
+#!/usr/bin/env bash
 # !/usr/bin/env bash
 # kill旧项目，删除旧项目，启动新项目，备份老项目
 DATE=$(date +%Y%m%d)
 
 export JAVA_HOME PATH CLASSPATH
-JAVA_HOME=/usr/java/jdk1.8.0_131
+JAVA_HOME=/usr/local/jdk1.8.0_111
 PATH=$JAVA_HOME/bin:$JAVA_HOME/jre/bin:$PATH
 CLASSPATH=.:$JAVA_HOME/lib:$JAVA_HOME/jre/lib:$CLASSPATH
 
