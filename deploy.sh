@@ -10,7 +10,7 @@ rm -rf /target
 mvn clean install
 
 # 修改文件访问权限
-chmod 777 /target/test-0.0.1-SNAPSHOT.jar
+chmod +x /target/test-0.0.1-SNAPSHOT.jar
 
 # 启动新项目
 java -jar /target/test-0.0.1-SNAPSHOT.jar
