@@ -1,4 +1,4 @@
-# !/usr/bin/env bash
+#!/usr/bin/env bash
 # kill旧项目，删除旧项目，启动新项目，备份老项目
 DATE=$(date +%Y%m%d)
 
@@ -10,8 +10,8 @@ CLASSPATH=.:$JAVA_HOME/lib:$JAVA_HOME/jre/lib:$CLASSPATH
 DIR=/root/test
 JARFILE=test-0.0.1-SNAPSHOT.jar
 
-if [ ! -d $DIR/backup ];
-then mkdir -p $DIR/backup
+if [ ! -d $DIR/backup ];then
+    mkdir -p $DIR/backup
 fi
 cd $DIR
 
@@ -20,7 +20,8 @@ mv $JARFILE backup/$JARFILE$DATE
 mv -f /root/Jenkins-in/$JARFILE .
 java -jar $JARFILE > out.log &
 if [ $? = 0 ];then
-sleep 30 tail -n 50 out.log
+    sleep 30
+    tail -n 50 out.log
 fi
 cd backup/
 ls -lt|awk 'NR>5{print $NF}'|xargs rm -rf
