@@ -10,5 +10,5 @@ rm -rf /target
 mvn clean install -Dmaven.test.skip=true
 
 # 启动新项目
-java -jar target/test-0.0.1-SNAPSHOT.jar
+java -jar target/test-0.0.1-SNAPSHOT.jar &
 
