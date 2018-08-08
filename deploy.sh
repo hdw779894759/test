@@ -9,6 +9,7 @@ killJavaTask(){
         echo "no server pid alive"
     else
         kill -9 $pid
+        echo "kill server pid success:$pid"
     fi
 }
 
