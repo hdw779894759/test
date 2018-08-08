@@ -4,10 +4,10 @@
 killJavaTask(){
     pid=`netstat -anp|grep 8090|awk '{print $7}'|cut -d/ -f1`
     echo "server alive at pid :$pid"
-    if [ "$pid"="" ]
-     then
+    if [ "$pid" = "" ]
+    then
         echo "no server pid alive"
-     else
+    else
         kill -9 $pid
     fi
 }
